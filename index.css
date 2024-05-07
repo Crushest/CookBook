@@ -65,17 +65,18 @@ nav button {
 }
 
 .auth-fields-and-buttons {
-  display: grid;
+  display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 2em;
+  padding-bottom: 50px;
 }
 
 /*/ Module Start /*/
 .closeForm {
   position: absolute;
-  right: 0px;
-  top: 0;
-  font-size: 2rem;
+  right: -75px;
+  top: 10px;
+  font-size: 1.5rem;
   background: none;
   border: 0;
   cursor: pointer;
@@ -151,7 +152,9 @@ input::placeholder {
 .primary-btn {
   background-color: #c98d2d;
   box-shadow: 0px 5px 0px 0px #2d2b2b;
-  position: relative;
+  position: absolute;
+  left: 30px;
+  bottom: 25px;
   border: 2px solid #2d2b2b;
 }
 
@@ -163,7 +166,9 @@ input::placeholder {
 .secondary-btn {
   background-color: #e9413b;
   border: 2px solid #2d2b2b;
-  position: relative;
+  position: absolute;
+  right: 5px;
+  bottom: 25px;
   box-shadow: 0px 5px 0px 0px #2d2b2b;
 }
 

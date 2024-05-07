@@ -36,10 +36,11 @@ const createAccountButtonEl = document.getElementById("create-account-btn");
 const signInWithGoogleButtonEl = document.getElementById(
   "sign-in-with-google-btn"
 );
+
 const closeForm = document.querySelector(".closeForm");
 const formContainer = document.querySelector(".loginForm");
 const loginBtn = document.getElementById("login");
-const overlay = document.querySelector(".overlay");
+const overlay = document.getElementById("overlay");
 
 // Event Listeners
 signOutButton.addEventListener("click", authSignOut);
@@ -51,11 +52,7 @@ loginBtn.addEventListener("click", (e) => {
   formContainer.classList.toggle("active");
   overlay.classList.remove("hidden");
 });
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
-    closeModal();
-  }
-});
+
 closeForm.addEventListener("click", (e) => {
   e.preventDefault();
   overlay.classList.add("hidden");
