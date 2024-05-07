@@ -33,10 +33,13 @@ const emailInputEl = document.getElementById("email-input");
 const passwordInputEl = document.getElementById("password-input");
 const signInButtonEl = document.getElementById("sign-in-btn");
 const createAccountButtonEl = document.getElementById("create-account-btn");
-const signInWithGoogleButtonEl = document.getElementById("sign-in-with-google-btn");
+const signInWithGoogleButtonEl = document.getElementById(
+  "sign-in-with-google-btn"
+);
 const closeForm = document.querySelector(".closeForm");
 const formContainer = document.querySelector(".loginForm");
 const loginBtn = document.getElementById("login");
+const overlay = document.querySelector(".overlay");
 
 // Event Listeners
 signOutButton.addEventListener("click", authSignOut);
@@ -46,12 +49,19 @@ createAccountButtonEl.addEventListener("click", authCreateAccountWithEmail);
 
 loginBtn.addEventListener("click", (e) => {
   formContainer.classList.toggle("active");
+  overlay.classList.remove("hidden");
 });
-
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
+});
 closeForm.addEventListener("click", (e) => {
   e.preventDefault();
+  overlay.classList.add("hidden");
   formContainer.classList.toggle("active");
 });
+
 
 function authSignInWithGoogle() {
   signInWithPopup(auth, provider)
