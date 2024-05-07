@@ -1,0 +1,317 @@
+/*/
+colors to keep
+fffbf4 Background
+FFF3E0 Light Background Color
+2D2B2B Dark edges and text
+9D968B Lighter Text color for highlighted text
+BC2C1A Red for Titles and such
+
+Inspiration: https://dribbble.com/shots/19480136-Recipes-Web-Application 
+/*/
+@font-face {
+  font-family: Gatile;
+  src: url(Font/Gatile.otf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Gatile, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fffbf4;
+}
+
+header {
+  background-color: #fff3e0;
+  padding: 20px;
+  padding-bottom: 250px;
+  margin-bottom: 75px;
+}
+
+nav {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+nav button {
+  background-color: #bc2c1a;
+  color: #fffbf4;
+  border: none;
+  max-height: 35px;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-family: Gatile, sans-serif;
+  font-size: larger;
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+.app-title {
+  font-family: Gatile, sans-serif;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.auth-fields-and-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+/*/ Module Start /*/
+.closeForm {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 2rem;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.loginForm {
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -200%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginForm.active {
+  transition: all 0.5s ease;
+  top: 0;
+}
+
+.form {
+  background: white;
+  padding: 2rem;
+  width: 400px;
+  position: relative;
+}
+
+input,
+button {
+  font-family: inherit;
+  padding: var(--element-padding);
+  border-radius: var(--element-border-radius);
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.1em;
+  text-align: center;
+  border: var(--border-width) solid var(--dark-color);
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+input {
+  font-weight: 300;
+}
+
+input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #2d2b2b;
+  opacity: 1; /* Firefox */
+}
+
+.primary-btn {
+  background-color: #ffda9e;
+  box-shadow: 0px 5px 0px 0px #2d2b2b;
+  position: relative;
+}
+
+.primary-btn:hover {
+  top: 5px;
+  box-shadow: none;
+}
+
+.secondary-btn {
+  padding: 0.4em;
+  background-color: transparent;
+}
+
+.secondary-btn:hover {
+  color: #fffefc;
+  background-color: #2d2b2b;
+}
+
+.provider-btn {
+  margin-bottom: 25px;
+  margin-top: 15px;
+  color: #2d2b2b;
+  background-color: #fffefc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  border: 0;
+  box-shadow: 3px 3px 3px 1px rgba(100, 100, 100, 0.25);
+}
+
+.provider-btn:hover {
+  transition: all 0.2s ease;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.google-btn-logo {
+  width: 1.375em;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 1.875em;
+}
+
+.icon-img-btn:hover {
+  filter: invert(0.5);
+}
+/*/ Module End/*/
+
+.subMenuWrap {
+  position: absolute;
+  top: 7.5%;
+  right: 0%;
+  width: 250px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+  z-index: 1;
+}
+
+.subMenuWrap.openMenu {
+  max-height: 400px;
+}
+
+.subMenu {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  border: 1px solid #888888;
+  padding: 10px;
+  box-shadow: 5px 7px 5px #888888;
+}
+
+.subMenu h2 {
+  text-align: center;
+}
+
+.subMenu hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background: #ccc;
+  margin: 15px 0 10px;
+}
+
+.subMenuLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #525252;
+  margin: 15px 0 15px 15px;
+}
+
+.subMenuLink p {
+  width: 85%;
+}
+
+.subMenuLink span {
+  font-size: 15px;
+  transition: transform 0.5s;
+}
+
+.subMenuLink:hover span {
+  transform: translateX(5px);
+}
+
+.subMenuLink:hover p {
+  font-weight: 600;
+}
+
+.container {
+  margin: 0px 20px 0px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.containerList {
+  margin: 20px;
+}
+
+#favorite-meal {
+  background-color: #fff3e0;
+  padding: 10% 10%;
+  border-radius: 8px;
+  margin-right: 10px;
+  grid-column: span 5;
+}
+
+#recent {
+  position: relative;
+  text-align: center;
+  padding: none;
+  margin: none;
+  grid-column: span 5;
+}
+
+.recipeBox {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 500px;
+  grid-gap: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.containerList > div.recipeBox {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 100px;
+  grid-gap: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.recipeBox > div {
+  display: flex;
+  padding: 10% 10%;
+  background-color: #fff3e0;
+  border-radius: 8px;
+}
+
+h2 {
+  color: #bc2c1a;
+}
+
+#loggedOutView {
+  display: flex;
+}
+
+#loggedInView {
+  display: none;
+}

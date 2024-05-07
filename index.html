@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <title>Family Recipes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script type="module" src="./index.js"></script>
+  </head>
+<body>
+
+<header>
+  <nav>
+    <h1> <a href="index.html">Family Recipes</a></h1>
+    <a href="#favorite-meal">Favorite</a>
+    <a href="recipe-list.html">List</a>
+    <a onclick="randomRecipe()">Random</a>
+    
+    <button>Add Recipe</button>
+    <img src="images/default.png" class="user-pic" onclick="toggleMenu()">
+
+  </div>
+
+    <section id="loggedInView">
+      <div class="subMenuWrap" id="loggedInSubMenu">
+        <div class="subMenu">
+            <h2> [User's Name ]</h2>
+            <hr>
+            <a href="#" class="subMenuLink"> 
+              <p>Edit Account</p>
+              <span>></span>
+            </a>
+            <a href="#" class="subMenuLink"> 
+              <p>Submitted Recipes</p>
+              <span>></span>
+            </a>
+            <a id="signOutBtn" class="subMenuLink"> 
+              <p>Logout</p>
+              <span>></span>
+            </a>
+      </div>
+    </section>
+
+    <section id="loggedOutView">
+            <div class="loginForm">
+
+                <h1 class="app-title">Login</h1>
+                
+                <div class="provider-buttons">
+                    <button id="sign-in-with-google-btn" class="provider-btn">
+                        <img src="images/google.png" class="google-btn-logo">
+                        Sign in with Google
+                    </button>
+                </div>
+                
+                <div class="auth-fields-and-buttons">
+                    <input id="email-input" type="email" placeholder="Email">
+                    <input id="password-input" type="password" placeholder="Password">
+                    
+                    <button id="sign-in-btn" class="primary-btn">Sign in</button>
+                    <button id="create-account-btn" class="secondary-btn">Create Account</button>
+                </div>
+            </div>
+      <div class="subMenuWrap" id="loggedOutSubMenu">
+        <div class="subMenu">
+            <h2> Welcome! </h2>
+            <hr>
+            <a  class="subMenuLink" id="login" > 
+              <p>Create Account</p>
+              <span>></span>
+            </a>
+        </div>
+      </div>
+    </section>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+  <div id="favorite-meal">
+    <h2>Favorite Meal</h2>
+    <p>Recipe for your favorite meal goes here...</p>
+  </div>
+  <div id="recent">
+  <h2 id="recenText">Most Recent</h2>
+  <div class="recipeBox">
+    <div>Banana</div>
+    <div>Apple</div>
+    <div>Banana</div>
+    <div>Apple</div>
+    <div>Banana</div>
+    <div>Apple</div>
+  </div>
+</div>
+</div >
+<div class="containerList">
+  <h2 id="list">List</h2>
+  <div class="recipeBox">
+    <div>Banana</div>
+    <div>Apple</div>
+    <div>Banana</div>
+    <div>Apple</div>
+    <div>Banana</div>
+    <div>Apple</div>
+    <div>Banana</div>
+    <div>Apple</div>
+    <div>Banana</div>
+    <div>Apple</div>
+    <div>Banana</div>
+    <div>Apple</div>
+    <div>Banana</div>
+    <div>Apple</div>
+    <div>Banana</div>
+    <div>Apple</div>
+  </div> 
+</div>
+
+<script>
+let loggedInSubMenu = document.getElementById("loggedInSubMenu");
+let loggedOutSubMenu = document.getElementById("loggedOutSubMenu");
+
+function toggleMenu(){
+  loggedInSubMenu.classList.toggle("openMenu");
+  loggedOutSubMenu.classList.toggle("openMenu");
+}
+</script>
+
+</body>
+</html>
