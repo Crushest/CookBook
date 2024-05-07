@@ -62,7 +62,6 @@ closeForm.addEventListener("click", (e) => {
   formContainer.classList.toggle("active");
 });
 
-
 function authSignInWithGoogle() {
   signInWithPopup(auth, provider)
     .then((result) => {
