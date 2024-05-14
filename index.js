@@ -63,6 +63,7 @@ function authSignInWithGoogle() {
   signInWithPopup(auth, provider)
     .then((result) => {
       console.log("Signed in with Google");
+      clearAuthFields();
     })
     .catch((error) => {
       console.error(error.message);
