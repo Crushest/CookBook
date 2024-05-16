@@ -64,6 +64,11 @@ button {
   align-items: center;
 }
 
+#userPic {
+  width: 2em;
+  height: 2em;
+  border-radius: 100%;
+}
 
 .app-title {
   font-family: Gatile, sans-serif;

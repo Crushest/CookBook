@@ -33,14 +33,14 @@ const emailInputEl = document.getElementById("email-input");
 const passwordInputEl = document.getElementById("password-input");
 const signInButtonEl = document.getElementById("sign-in-btn");
 const createAccountButtonEl = document.getElementById("create-account-btn");
-const signInWithGoogleButtonEl = document.getElementById(
-  "sign-in-with-google-btn"
-);
-
+const signInWithGoogleButtonEl = document.getElementById("sign-in-with-google-btn");
+const userPicEl = document.getElementById("userPic");
 const closeForm = document.querySelector(".closeForm");
 const formContainer = document.querySelector(".loginForm");
 const loginBtn = document.getElementById("login");
 const overlay = document.getElementById("overlay");
+const userNameEl = document.getElementById("userName");
+
 
 // Event Listeners
 signOutButton.addEventListener("click", authSignOut);
@@ -106,6 +106,8 @@ function authSignOut() {
 onAuthStateChanged(auth, (user) => {
   if (user) {
     showLoggedInView();
+    showProfilePicture(userPicEl, user)
+    showUserName(userNameEl, user)
   } else {
     showLoggedOutView();
   }
@@ -136,4 +138,27 @@ function showView(view) {
 
 function hideView(view) {
   view.style.display = "none";
+}
+
+function showProfilePicture(imgElement, user) {
+  const photoURL = user.photoURL
+  const defaultPic = "images/default.png"
+
+  if (photoURL) {
+      imgElement.src = photoURL
+  } else {
+      imgElement.src = defaultPic
+  }
+}
+
+function showUserName(element, user) {
+  const displayName = user.displayName
+  
+  if (displayName) {
+      
+      
+      element.textContent =  displayName
+  } else {
+      element.textContent = `Welcome!`
+  }
 }
