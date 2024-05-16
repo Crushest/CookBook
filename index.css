@@ -33,7 +33,6 @@ header {
 
 nav {
   display: flex;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   align-items: center;
 }
 
@@ -44,7 +43,7 @@ nav a {
   cursor: pointer;
 }
 
-nav button {
+button {
   background-color: #bc2c1a;
   color: #fffbf4;
   border: none;
@@ -54,9 +53,17 @@ nav button {
   border-radius: 8px;
   font-family: Gatile, sans-serif;
   font-size: larger;
-  margin-left: auto;
   margin-right: 25px;
 }
+
+#navRight {
+  position: absolute;
+  top: 45px;
+  right: 25px;
+  display: flex;
+  align-items: center;
+}
+
 
 .app-title {
   font-family: Gatile, sans-serif;

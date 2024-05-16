@@ -32,7 +32,7 @@
             <p>Submitted Recipes</p>
             <span>></span>
           </a>
-          <a id="signOutBtn" class="subMenuLink"> 
+          <a id="signOutBtn" class="subMenuLink" onclick="toggleMenu()"> 
             <p>Logout</p>
             <span>></span>
           </a>
@@ -59,12 +59,12 @@
               </div>
               </div>
           </div>
-          <div class="overlay hidden"></div>
+          <div id="overlay" class="overlay hidden"></div>
     <div class="subMenuWrap" id="loggedOutSubMenu">
       <div class="subMenu">
           <h2> Welcome! </h2>
           <hr>
-          <a  class="subMenuLink" id="login" > 
+          <a  class="subMenuLink" id="login" onclick="toggleMenu()"> 
             <p>Create Account</p>
             <span>></span>
           </a>

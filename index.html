@@ -14,12 +14,14 @@
     <a href="recipe-list.html">List</a>
     <a onclick="randomRecipe()">Random</a>
     
-    <button>Add Recipe</button>
-    <img src="images/default.png" class="user-pic" onclick="toggleMenu()">
+    
 
-  </div>
 
     <section id="loggedInView">
+      <div id="navRight">
+      <button id="add" >Add Recipe</button>
+      <img src="images/default.png" class="user-pic" onclick="toggleMenu()">
+      </div>
       <div class="subMenuWrap" id="loggedInSubMenu">
         <div class="subMenu">
             <h2> [User's Name ]</h2>
@@ -40,6 +42,9 @@
     </section>
 
     <section id="loggedOutView">
+      <div id="navRight">
+        <img src="images/default.png" class="user-pic" onclick="toggleMenu()">
+      </div>
             <div class="loginForm">
                 <div class="form">
                 <h1 class="app-title">Login</h1>
