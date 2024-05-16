@@ -40,6 +40,8 @@ const formContainer = document.querySelector(".loginForm");
 const loginBtn = document.getElementById("login");
 const overlay = document.getElementById("overlay");
 const userNameEl = document.getElementById("userName");
+const greetingEl = document.getElementById("greeting");
+
 
 
 // Event Listeners
@@ -108,6 +110,7 @@ onAuthStateChanged(auth, (user) => {
     showLoggedInView();
     showProfilePicture(userPicEl, user)
     showUserName(userNameEl, user)
+    greetingFunc(greetingEl, user)
   } else {
     showLoggedOutView();
   }
@@ -162,3 +165,16 @@ function showUserName(element, user) {
       element.textContent = `Welcome!`
   }
 }
+
+function greetingFunc(element, user) {
+  const displayName = user.displayName
+  
+  if (displayName) {
+    const userFirstName = displayName.split(" ")[0]
+      
+      element.textContent =  `Welcome back ${userFirstName}! Uncover countless recipes or share your culinary genius!`
+  } else {
+      element.textContent = `Welcome to our culinary haven! Explore our bounty of recipes or share your own creation!`
+  }
+}
+

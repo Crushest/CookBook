@@ -25,9 +25,9 @@ body {
 }
 
 header {
-  background-color: #fff3e0;
+  background-color: #FFF3E0;
   padding: 20px;
-  padding-bottom: 250px;
+  padding-bottom: 100px;
   margin-bottom: 75px;
 }
 
@@ -53,6 +53,7 @@ button {
   border-radius: 8px;
   font-family: Gatile, sans-serif;
   font-size: larger;
+  font-weight: lighter;
   margin-right: 25px;
 }
 
@@ -62,6 +63,11 @@ button {
   right: 25px;
   display: flex;
   align-items: center;
+}
+
+#greeting {
+  text-align: center; 
+  margin: 75px 33% 0 33%;
 }
 
 #userPic {
