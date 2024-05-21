@@ -10,6 +10,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
 } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAMx5Txlm2VbxLUKL-xsJVMEvvJ2YcZSoc",
@@ -23,6 +24,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
+const db = getFirestore(app);
 //Firebase Setup End
 
 // HTML elements
