@@ -8,9 +8,12 @@ import {
   signOut,
   onAuthStateChanged,
   GoogleAuthProvider,
-  signInWithPopup,
+  signInWithPopup
 } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore,
+         collection,
+         addDoc
+} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAMx5Txlm2VbxLUKL-xsJVMEvvJ2YcZSoc",
