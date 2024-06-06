@@ -21,7 +21,22 @@
       <div id="navRight">
       <button id="add" >Add Recipe</button>
       <img id="userPic" onclick="toggleMenu()">
+      </div> 
+      <!-- Recipe Modal Below -->
+        <div class="addRecipeForm">
+          <div class="form">
+          <h1 class="app-title">Add Recipe</h1>
+          <button class="closeAddRecipe">x</button>
+          <div class="auth-fields-and-buttons">
+              <input type="email" placeholder="Email">
+              <input type="password" placeholder="Password">
+              
+              <button id="addRecipe">Add Recipe</button>
+          </div>
+          </div>
       </div>
+      <div id="overlayAddRecipe" class="overlay hidden"></div>
+       <!-- End of add recipe Modal -->
       <div class="subMenuWrap" id="loggedInSubMenu">
         <div class="subMenu">
             <h2 id="userName"></h2>

@@ -41,9 +41,13 @@ const createAccountButtonEl = document.getElementById("create-account-btn");
 const signInWithGoogleButtonEl = document.getElementById("sign-in-with-google-btn");
 const userPicEl = document.getElementById("userPic");
 const closeForm = document.querySelector(".closeForm");
+const closeAddForm = document.querySelector(".closeAddRecipe");
 const formContainer = document.querySelector(".loginForm");
+const addContainer = document.querySelector(".addRecipeForm");
 const loginBtn = document.getElementById("login");
+const addBtn = document.getElementById("add");
 const overlay = document.getElementById("overlay");
+const overlayAdd = document.getElementById("overlayAddRecipe");
 const userNameEl = document.getElementById("userName");
 const greetingEl = document.getElementById("greeting");
 
@@ -54,6 +58,17 @@ signOutButton.addEventListener("click", authSignOut);
 signInWithGoogleButtonEl.addEventListener("click", authSignInWithGoogle);
 signInButtonEl.addEventListener("click", authSignInWithEmail);
 createAccountButtonEl.addEventListener("click", authCreateAccountWithEmail);
+
+addBtn.addEventListener("click", (e) => {
+  addContainer.classList.toggle("active");
+  overlayAdd.classList.remove("hidden");
+})
+
+closeAddForm.addEventListener("click", (e) => {
+  overlayAdd.classList.add("hidden");
+  addContainer.classList.toggle("active");
+})
+
 
 loginBtn.addEventListener("click", (e) => {
   formContainer.classList.toggle("active");

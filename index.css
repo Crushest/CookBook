@@ -89,7 +89,7 @@ button {
   padding-bottom: 50px;
 }
 
-/*/ Module Start /*/
+/*/ Login Modal Start /*/
 .closeForm {
   position: absolute;
   right: -75px;
@@ -174,10 +174,11 @@ input::placeholder {
   left: 30px;
   bottom: 25px;
   border: 2px solid #2d2b2b;
+  transition: all 0.3s ease;
 }
 
 .primary-btn:hover {
-  top: 5px;
+  transform: translateY(5px);
   box-shadow: none;
 }
 
@@ -188,10 +189,11 @@ input::placeholder {
   right: 5px;
   bottom: 25px;
   box-shadow: 0px 5px 0px 0px #2d2b2b;
+  transition: all 0.3s ease;
 }
 
 .secondary-btn:hover {
-  top: 5px;
+  transform: translateY(5px);
   box-shadow: none;
 }
 
@@ -204,13 +206,14 @@ input::placeholder {
   top: 75px;
   color: #2d2b2b;
   margin-left: 0;
-  background-color: #fffefc;
-  box-shadow: 0px 0px 3px 4px rgba(100, 100, 100, 0.25);
+  background-color: #f0d1a0;
+  box-shadow: 0px 5px 0px 0px #2d2b2b;
+  transition: all 0.3s ease;
 }
 
 .provider-btn:hover {
-  transition: all 0.2s ease;
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.25);
+  transform: translateY(5px);
+  box-shadow: none
 }
 
 .google-btn-logo {
@@ -220,7 +223,55 @@ input::placeholder {
 .hidden {
   display: none;
 }
-/*/ Module End/*/
+/*/ Login Modal End/*/
+
+/*/ Add Recipe Module Start /*/
+.addRecipeForm {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -200%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.addRecipeForm.active {
+  transition: all 0.5s ease;
+  top: 0;
+}
+
+.closeAddRecipe {
+  position: absolute;
+  right: -75px;
+  top: 10px;
+  font-size: 1.5rem;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: #2d2b2b;
+}
+
+#addRecipe {
+  background-color: #c98d2d;
+  box-shadow: 0px 5px 0px 0px #2d2b2b;
+  width: 75%;
+  position: static;
+  align-self: center;
+  margin-left: 25px;
+  border: 2px solid #2d2b2b;
+  transition: all 0.3s ease;
+}
+
+#addRecipe:hover {
+  transform: translateY(5px);
+  box-shadow: none;
+}
+/*/ Add Recipe Module End /*/
 
 .subMenuWrap {
   position: absolute;
