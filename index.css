@@ -285,12 +285,34 @@ input::placeholder {
   margin-left: 25px;
   border: 2px solid #2d2b2b;
   transition: all 0.3s ease;
+  margin-top: 50px;
 }
 
 #addRecipe:hover {
   transform: translateY(5px);
   box-shadow: none;
 }
+
+#total-time {
+ width: 30%;
+ margin: 10px 0 10px 0;
+}
+
+#servings {
+  width: 30%;
+  margin: 10px 0 10px 0;
+}
+
+#main-photo {
+  width: 40%;
+  margin: 10px 0 10px 0;
+}
+
+#tags {
+  width: 40%;
+  margin: 10px 0 10px 0;
+}
+
 /*/ Add Recipe Module End /*/
 
 .subMenuWrap {

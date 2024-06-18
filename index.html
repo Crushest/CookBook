@@ -31,10 +31,10 @@
                 <input type="text" id="title" name="title" required>
 
                 <label for="description">Description:</label>
-                <textarea id="description" name="description" rows="3" required></textarea>
+                <input type="text" id="description" name="description" required>
 
                 <label for="ingredients">Ingredient List:</label>
-                <textarea id="ingredients" name="ingredients" rows="5" placeholder="e.g., 1 cup sugar, 2 eggs, etc." required></textarea>
+                <input type="text" id="ingredients" name="ingredients"  required>
 
                 <label for="total-time">Total Time (in minutes):</label>
                 <input type="number" id="total-time" name="total-time" required>
@@ -43,14 +43,7 @@
                 <input type="number" id="servings" name="servings" required>
 
                 <label for="instructions">Step-by-Step Instructions:</label>
-                <textarea id="instructions" name="instructions" rows="10" required></textarea>
-
-                <label for="difficulty">Difficulty Level:</label>
-                <select id="difficulty" name="difficulty" required>
-                    <option value="easy">Easy</option>
-                    <option value="medium">Medium</option>
-                    <option value="hard">Hard</option>
-                </select>
+                <input id="instructions" name="instructions"  required></input>
 
                 <label for="meal-type">Meal Type:</label>
                 <input type="text" id="meal-type" name="meal-type" required>
@@ -62,7 +55,7 @@
                 <input type="text" id="tags" name="tags" placeholder="e.g., quick meals, holiday recipes">
 
                 <label for="comments">Additional Comments:</label>
-                <textarea id="comments" name="comments" rows="3"></textarea>
+                <input type="text" id="comments" name="comments">
 
                 <button id="addRecipe" type="submit">Add Recipe</button>
             </form>
