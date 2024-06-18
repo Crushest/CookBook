@@ -59,6 +59,8 @@ signInWithGoogleButtonEl.addEventListener("click", authSignInWithGoogle);
 signInButtonEl.addEventListener("click", authSignInWithEmail);
 createAccountButtonEl.addEventListener("click", authCreateAccountWithEmail);
 
+
+
 addBtn.addEventListener("click", (e) => {
   addContainer.classList.toggle("active");
   overlayAdd.classList.remove("hidden");

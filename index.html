@@ -1,10 +1,12 @@
-<html>
-  <head>
-    <title>Family Recipes</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Recipes</title>
     <link rel="stylesheet" href="index.css">
     <script type="module" src="./index.js"></script>
-  </head>
+</head>
 <body>
 
 <header>
@@ -13,10 +15,6 @@
     <a href="#favorite-meal">Favorite</a>
     <a href="recipe-list.html">List</a>
     <a onclick="randomRecipe()">Random</a>
-    
-    
-
-
     <section id="loggedInView">
       <div id="navRight">
       <button id="add" >Add Recipe</button>
@@ -28,10 +26,46 @@
           <h1 class="app-title">Add Recipe</h1>
           <button class="closeAddRecipe">x</button>
           <div class="auth-fields-and-buttons">
-              <input type="email" placeholder="Email">
-              <input type="password" placeholder="Password">
-              
-              <button id="addRecipe">Add Recipe</button>
+            <form id="recipeForm" action="/submit-recipe" method="post" enctype="multipart/form-data">
+                <label for="title">Recipe Title:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="3" required></textarea>
+
+                <label for="ingredients">Ingredient List:</label>
+                <textarea id="ingredients" name="ingredients" rows="5" placeholder="e.g., 1 cup sugar, 2 eggs, etc." required></textarea>
+
+                <label for="total-time">Total Time (in minutes):</label>
+                <input type="number" id="total-time" name="total-time" required>
+
+                <label for="servings">Servings:</label>
+                <input type="number" id="servings" name="servings" required>
+
+                <label for="instructions">Step-by-Step Instructions:</label>
+                <textarea id="instructions" name="instructions" rows="10" required></textarea>
+
+                <label for="difficulty">Difficulty Level:</label>
+                <select id="difficulty" name="difficulty" required>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+
+                <label for="meal-type">Meal Type:</label>
+                <input type="text" id="meal-type" name="meal-type" required>
+
+                <label for="main-photo">Main Photo:</label>
+                <input type="file" id="main-photo" name="main-photo" accept="image/*" required>
+
+                <label for="tags">Tags:</label>
+                <input type="text" id="tags" name="tags" placeholder="e.g., quick meals, holiday recipes">
+
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="3"></textarea>
+
+                <button id="addRecipe" type="submit">Add Recipe</button>
+            </form>
           </div>
           </div>
       </div>

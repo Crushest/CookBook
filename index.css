@@ -64,7 +64,7 @@ button {
   display: flex;
   align-items: center;
 }
-
+  
 #greeting {
   text-align: center; 
   margin: 75px 33% 0 33%;
@@ -228,7 +228,7 @@ input::placeholder {
 /*/ Add Recipe Module Start /*/
 .addRecipeForm {
   width: 100%;
-  height: 100%;
+  height: 110%;
   position: absolute;
   left: 0;
   right: 0;
@@ -238,11 +238,31 @@ input::placeholder {
   justify-content: center;
   align-items: center;
   z-index: 2;
+  overflow: hidden;
 }
+
+.addRecipeForm .form {
+  padding: 2rem;
+  width: 800px;
+  max-height: 80vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+  border-radius: 5px;
+  text-align: center;
+}
+
 
 .addRecipeForm.active {
   transition: all 0.5s ease;
   top: 0;
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit (Chrome, Safari) */
 }
 
 .closeAddRecipe {
