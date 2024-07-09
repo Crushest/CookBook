@@ -14,7 +14,7 @@
     <h1> <a href="index.html">Family Recipes</a></h1>
     <a href="#favorite-meal">Favorite</a>
     <a href="recipe-list.html">List</a>
-    <a onclick="randomRecipe()">Random</a>
+    <a onclick="randomRecipe()">Surprise Me!</a>
     <section id="loggedInView">
       <div id="navRight">
       <button id="add" >Add Recipe</button>
@@ -43,10 +43,10 @@
                 <input type="number" id="servings" name="servings" required>
 
                 <label for="instructions">Step-by-Step Instructions (Seperate steps with :):</label>
-                <input id="instructions" name="instructions"  required></input>
+                <input id="instructions" name="instructions" placeholder="boil water : saute noodles for 3 minutes"  required></input>
 
                 <label for="meal-type">Meal Type:</label>
-                <input type="text" id="meal-type" name="meal-type" required>
+                <input type="text" id="meal-type" name="meal-type" placeholder="breakfast, lunch, dinner, snack" required>
 
                 <label for="main-photo">Main Photo:</label>
                 <input type="file" id="main-photo" name="main-photo" accept="image/*" >
